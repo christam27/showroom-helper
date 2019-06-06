@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "komi showroom",
+  "version": "1.0",
+
+  "permissions": [
+    "http://*/*","https://*/*",
+    "storage",
+    "contextMenus",
+    "tabs"
+  ],
+
+  "background": {
+      "scripts": ["background.js"]
+    },
+
+  "content_scripts": [ {
+      "matches":["http://*/*", "https://*/*"],
+      "js":["jquery-3.4.1.min.js","inject.js"]
+    }
+  ]
+}
